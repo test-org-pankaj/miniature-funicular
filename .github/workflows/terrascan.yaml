@@ -1,0 +1,19 @@
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  terrascan_job:
+    runs-on: ubuntu-latest
+    name: terrascan-action
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run Terrascan
+        id: terrascan
+        uses: docker://nasirrabbani/terrascan-action:test3
+        with:
+          only_warn: true
+          verbose: true
+          notification_webhook_url: https://d3df-103-83-214-125.ngrok.io/v1/api/terrascan
+          notification_webhook_token: 9c8e0ba4-8a5e-48dc-b0b7-659f0dbdafec
+          repo_url: https://github.com/test-org-pankaj/miniature-funicular.git
