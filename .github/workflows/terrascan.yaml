@@ -15,5 +15,5 @@ jobs:
           only_warn: true
           verbose: true
           notification_webhook_url: https://a55a-103-83-214-125.ngrok.io/v1/api/terrascan
-          notification_webhook_token: aaa053ff-1871-464d-960d-726ed2352021
+          notification_webhook_token: 6a37f6a5-39b4-428f-8414-44ad6c1c90a3
           repo_url: https://github.com/test-org-pankaj/miniature-funicular.git
